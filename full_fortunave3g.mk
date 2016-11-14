@@ -13,6 +13,7 @@
 # limitations under the License.
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
 # Inherit from fortunave3g device
 $(call inherit-product, device/samsung/fortunave3g/device.mk)
 
