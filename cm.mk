@@ -9,6 +9,3 @@ PRODUCT_RELEASE_NAME := fortunave3g
 # Setup device configuration
 PRODUCT_NAME := cm_fortunave3g
 PRODUCT_DEVICE := fortunave3g
-PRODUCT_BRAND := Samsung
-PRODUCT_MANUFACTURER := Samsung
-PRODUCT_MODEL := SM-G530H
