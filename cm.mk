@@ -4,8 +4,6 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, $(LOCAL_PATH)/full_fortunave3g.mk)
 
-PRODUCT_RELEASE_NAME := fortunave3g
-
 # Setup device configuration
 PRODUCT_NAME := cm_fortunave3g
 PRODUCT_DEVICE := fortunave3g
