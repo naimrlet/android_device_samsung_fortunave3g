@@ -20,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product-if-exists, vendor/samsung/fortunave3g/fortunave3g-vendor.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS +=  device/samsung/fortunave3g/overlay
 
 # common msm8916
-$(call inherit-product, device/samsung/msm8916-common/msm8916.mk)
+$(call inherit-product, device/samsung/fortuna-common/fortuna.mk)
