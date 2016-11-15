@@ -1,5 +1,5 @@
 # Inherit from common samsung msm8916
--include device/samsung/msm8916-common/BoardConfigCommon.mk
+-include device/samsung/fortuna-common/BoardConfigCommon.mk
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE  := fortunave3g,SM-G530H,fortuna3g
