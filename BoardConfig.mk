@@ -10,9 +10,9 @@ TARGET_OTA_ASSERT_DEVICE := fortunave3g,SM-G530H,fortuna3g
 TARGET_KERNEL_CONFIG := msm8916_fortunave3g_eur_defconfig
 
 # Vendor Init
-TARGET_UNIFIED_DEVICE        := true
-TARGET_INIT_VENDOR_LIB       := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE  := $(LOCAL_PATH)/init/init_fortunave3g.c
+TARGET_UNIFIED_DEVICE                := true
+TARGET_INIT_VENDOR_LIB               := libinit_fortunave3g
+TARGET_RECOVERY_DEVICE_MODULES       := libinit_fortunave3g
 
 # inherit from the proprietary version
 -include vendor/samsung/fortunave3g/BoardConfigVendor.mk
