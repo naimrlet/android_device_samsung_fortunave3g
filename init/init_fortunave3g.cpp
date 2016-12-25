@@ -1,5 +1,6 @@
 /*
    Copyright (c) 2016, The Linux Foundation. All rights reserved.
+
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -12,6 +13,7 @@
     * Neither the name of The Linux Foundation nor the names of its
       contributors may be used to endorse or promote products derived
       from this software without specific prior written permission.
+
    THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
@@ -24,8 +26,7 @@
    OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- 
- 
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -34,21 +35,22 @@
 #include "log.h"
 #include "util.h"
 
-void vendor_load_properties()
-{
-    char bootloader[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
-    char devicename[PROP_VALUE_MAX];
+#include "init_msm8916.h"
 
-    property_get("ro.bootloader", bootloader);
-    
+void init_target_properties()
+{
+    std::string platform = property_get("ro.board.platform");
+    if (platform != ANDROID_TARGET)
+        return;
+
+    std::string bootloader = property_get("ro.bootloader"); 
+
     property_set("ro.product.model", "SM-G530H");
     property_set("ro.product.device", "fortunave3g");
     property_set("persist.radio.multisim.config", "dsds");
     property_set("ro.multisim.simslotcount", "2");
     property_set("telephony.lteOnGsmDevice","0");
-   
-    property_get("ro.product.device", device);
-    strlcpy(devicename, device, sizeof(devicename));
-    ERROR("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
+    
+    std::string device = property_get("ro.product.device");
+    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());
 }
