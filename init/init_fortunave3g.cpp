@@ -1,6 +1,5 @@
 /*
    Copyright (c) 2016, The Linux Foundation. All rights reserved.
-
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -13,7 +12,6 @@
     * Neither the name of The Linux Foundation nor the names of its
       contributors may be used to endorse or promote products derived
       from this software without specific prior written permission.
-
    THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
@@ -41,6 +39,7 @@ void init_target_properties()
     if (platform != ANDROID_TARGET)
         return;
 
+    std::string bootloader = property_get("ro.bootloader"); 
     std::string bootloader = property_get("ro.bootloader"); 
 
     property_set("ro.product.model", "SM-G530H");
