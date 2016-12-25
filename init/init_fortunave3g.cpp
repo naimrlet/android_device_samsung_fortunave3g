@@ -39,8 +39,7 @@ void init_target_properties()
     if (platform != ANDROID_TARGET)
         return;
 
-    std::string bootloader = property_get("ro.bootloader"); 
-    std::string bootloader = property_get("ro.bootloader"); 
+    std::string bootloader = property_get("ro.bootloader");
 
     property_set("ro.product.model", "SM-G530H");
     property_set("ro.product.device", "fortunave3g");
