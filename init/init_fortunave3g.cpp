@@ -51,7 +51,6 @@ void vendor_load_properties()
     property_set("ro.product.device", "fortunave3g");
     property_set("persist.radio.multisim.config", "dsds");
     property_set("ro.multisim.simslotcount", "2");
-    //property_set("telephony.lteOnGsmDevice","0");
     
     property_get("ro.product.device", device, NULL);
     strlcpy(devicename, device, sizeof(devicename));
